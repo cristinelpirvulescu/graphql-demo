@@ -1,0 +1,33 @@
+version: '3'
+services:
+  database:
+    image: mongo:4
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./container-storage/db:/data/db
+    tty: true
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    restart: on-failure
+    hostname: graphql.demo
+    depends_on:
+      - database
+
+    volumes:
+      - ./:/app:delegated
+      - /app/container-storage
+    ports:
+      - '4000:4000'
+      - '9228:9228'
+      - '9229:9229'
+    tty: true
+volumes:
+  app-node-modules:
+
+networks:
+  default:
+    external:
+      name: graphql-demo

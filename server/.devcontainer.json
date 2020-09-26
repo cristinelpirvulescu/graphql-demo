@@ -1,0 +1,28 @@
+{
+  // https://code.visualstudio.com/docs/remote/containers#_devcontainerjson-reference
+  "name": "grahql-demo",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/app",
+  "settings": {
+    "terminal.integrated.shell.linux": "/usr/bin/fish"
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "dsznajder.es7-react-js-snippets",
+    "kumar-harsh.graphql-for-vscode",
+    "wix.vscode-import-cost",
+    "bradlc.vscode-tailwindcss",
+    "attilabuti.vscode-mjml",
+    "annsk.alignment",
+    "joelday.docthis",
+    "editorconfig.editorconfig",
+    "christian-kohler.npm-intellisense",
+    "ziyasal.vscode-open-in-github",
+    "christian-kohler.path-intellisense",
+    "cmstead.jsrefactor",
+    "ms-azuretools.vscode-docker",
+    "eamodio.gitlens"
+  ]
+}

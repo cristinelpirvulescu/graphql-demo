@@ -1,0 +1,19 @@
+FROM node:lts-alpine as assets
+LABEL maintainer="Cristi Pirvulescu<pirvulescu.cristi@gmail.com>"
+
+# Add build dependencies — required to build bcrypt
+RUN apk update && \
+  apk add python python3 build-base fish
+
+VOLUME [ "/opt/app", "/opt/app/node_modules", "/opt/app/container-storage/data" ]
+
+WORKDIR /opt/app
+
+# Expose server port
+EXPOSE 4000
+
+# Expose debug ports
+EXPOSE 9228
+EXPOSE 9229
+
+CMD [ "/usr/bin/fish" ]

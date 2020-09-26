@@ -1,0 +1,11 @@
+.editorconfig
+.eslintrc.js
+.prettierrc
+.vscode
+.gitignore
+.github
+.env.development
+Dockerfile
+README.md
+yarn.lock
+nodemon.json
