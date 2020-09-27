@@ -24,5 +24,5 @@ server.applyMiddleware({ app });
 
 // The `listen` method launches a web server.
 app.listen({ port: 4000 }, () =>
-  console.log(`🚀 Server ready at http://local.graphql.com${server.graphqlPath}`)
+  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
 );

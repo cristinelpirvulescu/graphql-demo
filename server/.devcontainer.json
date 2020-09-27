@@ -1,9 +1,9 @@
 {
   // https://code.visualstudio.com/docs/remote/containers#_devcontainerjson-reference
-  "name": "grahql-demo",
+  "name": "grahql-demo-server",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
-  "workspaceFolder": "/app",
+  "service": "server",
+  "workspaceFolder": "/app/server",
   "settings": {
     "terminal.integrated.shell.linux": "/usr/bin/fish"
   },

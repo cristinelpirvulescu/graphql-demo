@@ -5,7 +5,7 @@ LABEL maintainer="Cristi Pirvulescu<pirvulescu.cristi@gmail.com>"
 RUN apk update && \
   apk add python python3 build-base fish
 
-VOLUME [ "/opt/app", "/opt/app/node_modules", "/opt/app/container-storage/data" ]
+VOLUME [ "/opt/app/server", "/opt/app/server/node_modules", "/opt/app/server/container-storage/data" ]
 
 WORKDIR /opt/app
 

@@ -7,7 +7,7 @@ services:
     volumes:
       - ./container-storage/db:/data/db
     tty: true
-  app:
+  server:
     build:
       context: .
       dockerfile: Dockerfile-dev
@@ -17,8 +17,8 @@ services:
       - database
 
     volumes:
-      - ./:/app:delegated
-      - /app/container-storage
+      - ./:/app/server:delegated
+      - /app/server/container-storage
     ports:
       - '4000:4000'
       - '9228:9228'
